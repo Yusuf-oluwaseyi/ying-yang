@@ -1,0 +1,57 @@
+.Life{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #264653;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+h1{
+    color: #2a9d8f;
+    text-align: center;
+}
+.ying-yang {
+    width: 96px;
+    height: 48px;
+    background: white;
+    border-color: black;
+    position: relative;
+    border-style: solid;
+    border-width: 2px 2px 50px 2px;
+    border-radius: 100%;
+    animation: spin 1s linear infinite;
+    left: 35%;
+}
+.ying-yang::before{
+    content: "";
+    background: white;
+    border: 18px solid black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+}
+.ying-yang::after{
+    content: "";
+    background: black;
+    border: 18px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+}
+
+@keyframes spin{
+    100%{
+        -webkit-transform: rotate(160deg);
+        transform: rotate(360deg);
+    }
+}
